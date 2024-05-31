@@ -1,0 +1,65 @@
+<html>
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="my-5 text-center">
+        <h1 class="position-relative mb-5">Bookmarker</h1>
+        <div class="form container py-3">
+            <div class="text-center title">
+                <p class="fs-3 fw-semibold"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i>
+                </p>
+            </div>
+            <div class="my-3 text-start">
+                <label class="form-label fw-bold" for="SiteName">
+                    <i class="fa-solid  fa-book-bookmark"></i>
+                    Site Name</label>
+                <input class="form-control" oninput="checkName(this)" placeholder="Bookmark Name" type="text"
+                    id="SiteName">
+                <div class="alert alert-danger py-2 my-3 d-none" id="invalid1">Name must be 3 or more chars(a-z,A-Z,0-9)
+                </div>
+            </div>
+
+            <div class="my-3 text-start">
+                <label for="SiteURL" class="form-label fw-bold">
+                    <i class="fa-solid fa-link"></i>
+                    Site URL</label>
+                <input type="text" id="SiteURL" oninput="checkURL(this)"  placeholder="Website URL" class="form-control">
+                <div class="alert alert-danger py-2 my-3 d-none" id="invalid2">URL must contain 3 or more
+                    chars(a-z,A-Z,0-9) then a (.) then 2 or more chars ex:(example.com)</div>
+            </div>
+            <button onclick="submit()" class="px-5 py-2 border-0 rounded-2 bg-danger text-white">Submit</button>
+        </div>
+        <div class="container my-3" id="items">
+            <div class="d-flex">
+                <div class="w-25 bg-light py-2">
+                    <b>index</b>
+                </div>
+                <div class="w-25 bg-light py-2">
+                    <b>Website Name</b>
+                </div>
+                <div class="w-25 bg-light py-2">
+                    <b>Visit</b>
+                </div>
+                <div class="w-25 bg-light py-2">
+                    <b>Delete</b>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
